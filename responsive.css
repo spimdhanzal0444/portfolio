@@ -1,0 +1,132 @@
+
+@media only screen and (min-width: 1400px){
+	#banner{
+		max-width: 1400px;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 991px){
+
+	.profileDesign {
+	    background: linear-gradient(rgba(85, 105, 220,0.4),rgba(85, 105, 220,0.4));
+	    width: 100%;
+	    text-align: right;
+	}
+	.profileTitle p {
+		padding: 0 0px; 
+	}
+	.profileBio {
+	    float: right;
+	}
+	.typeAnimate{
+		position: absolute;
+		z-index: 99;
+	}
+
+  .aboutMe p {
+		 padding-right: 0px;
+	}
+
+}
+
+@media only screen and (max-width:767px){
+	.menu-ul{
+		display: none;
+	}
+	span.burger-menu{
+		display: block;
+	}
+	.typeAnimate {
+		top: 6%;
+	}
+	.typeAnimate h1 {
+			font-weight: normal;
+			font-size: 45px;
+	}
+	.typeAnimate h2{
+		font-size: 25px;
+	}
+	.typeAnimate .pl-5, .px-5 {
+		padding-left: 0rem !important;
+	}
+	.typeAnimate .ml-5, .mx-5 {
+		margin-left: 0rem !important;
+	}
+	.typeAnimate .lead{
+		font-size: 13px;
+		color: #fff
+	}
+	#sm-top-mt {
+		margin-top: 50px;
+	}
+	#md-top-mt{
+		margin-top: 50px;
+	}
+	.topArrow span {
+		position: static;
+		float: right;
+	}
+	.SP {
+		padding: 0px 20px 0 20px !important;
+	}
+}
+
+@media only screen and (max-width:575px){
+	.typeAnimate h1 {
+			font-size: 30px;
+	}
+	.typeAnimate h2{
+		font-size: 20px;
+	}
+
+	.typeAnimate .lead{
+		display: none;
+	}
+	.profileBio {
+		float: none;
+		text-align: center;
+		margin: auto;
+	}
+	.aboutMe .lead {
+		font-size: 15px !important;
+	}
+	.titleHeader h2 {
+		font-size: 38px;
+	}
+	.subTitle .lead {
+		font-size: 16px !important;
+	}
+
+}
+@media only screen and (max-width:480px){
+	.typeAnimate h1 {
+			font-size: 20px;
+	}
+	.typeAnimate h2{
+		font-size: 15px;
+	}
+}
+@media only screen and (max-width:370px){
+	.typeAnimate{
+		display: none;
+	}
+	.profileDesign {
+		text-align: center;
+	}
+	.profileBio {
+		font-family: 'Playfair Display', serif;
+		width: auto;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

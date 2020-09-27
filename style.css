@@ -1,0 +1,631 @@
+
+
+/*.......... PRELOADER ............*/
+.preloader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #777;
+    z-index: 999;
+    opacity: 0.9;
+    overflow: hidden;
+}
+ul.preloaderList {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+}
+
+ul.preloaderList li {
+    list-style-type: disc;
+    width: 3px;
+    height: 25px;
+    background: #fff;
+    display: inline-block;
+    margin: 0 7px;
+    animation: preloaderanimate 1s infinite;
+}
+
+/* loader timer */
+ul.preloaderList li:nth-child(1)
+{
+	animation-delay: .1s;
+}
+ul.preloaderList li:nth-child(2)
+{
+	animation-delay: .2s;
+}
+ul.preloaderList li:nth-child(3)
+{
+	animation-delay: .3s;
+}
+ul.preloaderList li:nth-child(4)
+{
+	animation-delay: .4s;
+}
+ul.preloaderList li:nth-child(5)
+{
+	animation-delay: .5s;
+}
+ul.preloaderList li:nth-child(6)
+{
+	animation-delay: .6s;
+}
+ul.preloaderList li:nth-child(7)
+{
+	animation-delay: .7s;
+}
+
+/* loader key fremes */
+@keyframes preloaderanimate{
+	0%{
+		transform: scaleY(1);
+	}
+	25%{
+		transform: scaleY(1);
+	}
+	50%{
+		transform: scaleY(1);
+	}
+	75%{
+		transform: scaleY(1);
+	}
+	100%{
+		transform: scaleY(2);
+	}
+}
+
+
+
+/*........... BASIC SETUP ...........*/
+*{
+	box-sizing: border-box;	
+}
+html{
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+body{
+	padding: 0;
+	margin: 0;
+	text-rendering: optimizeLegibility;
+	background: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	padding: 0;
+	margin: 0; 
+}
+li{
+	list-style-type: none;
+}
+
+/*........... COMMON VARIABLES ...........*/
+:root{
+	--bg: rgb(85, 105, 220);
+	--tc: rgb(85, 105, 220);
+	--italicFontF:('Playfair Display');
+}
+
+/*........... FONT FAMILY ...........*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+
+/*........... GLOBAL BUTTON ...........*/
+.animate-btn {
+	overflow: hidden;
+	margin: auto;
+	display: inline-block;
+}
+
+.animate-btn a {
+    font-size: 17px;
+    background: #000;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 25px;
+    border-radius: 2px;
+}
+
+.animate-btn a {
+	display: inline-block;
+	vertical-align: middle;
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	transition-property: color;
+	transition-duration: 0.3s;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.animate-btn a::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: var(--bg);
+	border-radius: 100%; 
+	border: 5px solid rgba(255, 219, 77, 0.8); 
+	transform: scale(0); 
+	transition-property: transform;
+	transition-duration: 1s;
+	transition-timing-function: ease-out;
+}
+
+.animate-btn a:hover::after {
+	transform: scale(2);
+	color: #ffffff;
+}
+
+/*Multiple Title*/
+.titleHeader h2{
+	color: var(--tc);
+	font-family: 'Playfair Display', serif;
+}
+.subTitle .lead {
+    font-size: 18px !important;
+    color: var(--tc);
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+}
+/* section padding */
+.SP{
+	padding: 0px 65px 0 65px;
+}
+
+
+/*........... STRAT HEADER ...........*/
+#menu{
+	background: var(--bg);
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+	font-size: 22px;
+}
+
+#menu .main-nav {
+    padding: 15px 0;
+}
+
+.main-nav .menu-ul {
+    float: left;
+}
+
+.menu-ul li {
+    display: inline-block;
+    padding: 0 20px 0 0;
+}
+.menu-ul li:last-child{
+	padding-right: 0 !important; 
+}
+
+.menu-ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: inline-block;
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+.menu-ul li a:hover{
+	color: rgb(167 169 181);
+}
+
+.H-declare {
+    float: right;
+    position: relative;
+    z-index: 999999;
+}
+
+.H-declare strong {
+    font-size: 22px;
+    border: 1px solid #fff;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    line-height: 35px;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.H-declare span {
+    color: #fff;
+    font-size: 22px;
+}
+/* STICKY MENU */
+
+.sticky{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	background:var(--bg);
+	transition: 1s !important;
+}
+nav.main-nav.sticky {
+    box-shadow: 0 0 10px 3px #000;
+}
+nav.main-nav.sticky.stickyPadding {
+    padding: 3px 0px !important;
+}
+
+/*MOBILE MENU*/
+span.burger-menu {
+    color: #fff;
+    margin-top: 2px;
+    font-size: 22px;
+    display: none;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100% !important;
+    background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9));
+    overflow: hidden;
+    display: block;
+    z-index: 999;
+    transition: .5s;
+}
+
+.overlayContent {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.overlayContent a {
+	color: #fff;
+	width: 100%;
+	padding: 12px 15px;
+	display: inline-block;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.overlayContent a:hover{
+	color: var(--tc);
+	background: #fff; 
+}
+
+a#close {
+    font-size: 40px;
+    background: #4c4c4c;
+    margin: 10px 0 0 50px;
+    display: inline-block;
+    width: 50px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/*........... STRAT BANNER ...........*/
+#banner{
+	background: linear-gradient(rgba(0, 232, 113, .1),rgba(0, 232, 113, .1)) ,url('img/banner-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 550px;
+	position: relative;
+	overflow: hidden;
+}
+
+.bannerPadding{
+	padding-right: 0;
+	padding-left: 50px;
+}
+
+.col-8-Banner{
+	float: left;
+}
+/* profile */
+.col-4-Banner{
+	float: left;
+}
+.profileDesign {
+    background: var(--bg);
+    position: absolute;
+    right: 0;
+    text-align: center;
+    padding: 0 50px; 
+    height: 100%;
+}
+.profileDesign .profileImg img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.profileBio {
+    font-family: 'Playfair Display', serif;
+    width: 280px;
+}
+
+.name h2 {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 35px;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 0 4px 2px #000;
+    margin: 25px 0px;
+}
+.profileTitle p {
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Playfair Display', serif;
+    padding: 0 45px;
+    margin-bottom: 25px;
+}
+
+.profileContact a {
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    transition: .4s;
+}
+.profileContact a:hover{
+	color: rgb(167 169 181);
+}
+
+.socialMedia {
+    margin-top: 10px;
+}
+
+.socialMedia a {
+    color: #fff;
+    font-size: 16px;
+    display: inline-block;
+    padding: 0 10px;
+    transition: .4s;
+}
+
+.socialMedia a:hover{
+	color: rgb(167 169 181);
+}
+#globalButton{
+	margin-top: 20px;
+}
+/* type js */
+.typeAnimate{
+	position: absolute;
+	top: 50%;
+}
+
+.typeAnimate h1{
+	font-weight: bold;
+	font-family: 'Playfair Display', serif;
+	text-shadow: 0 4px 2px #000;
+	height: 90px;
+}
+
+.typeAnimate h2{
+	letter-spacing: 1px;
+}
+
+.typeAnimate p{
+	font-size: 20px;
+	font-family: 'Playfair Display', serif;
+	color: gray;
+}
+
+/*....... STRAT ABOUT ......*/
+
+
+#about{
+	padding: 85px 0;
+	background:#edf0fc;
+}
+
+.about-contant {
+    padding: 0px 140px 0 60px;
+}
+
+.aboutMe p {
+    font-size: 20px !important;
+    color: rgb(98 99 105);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 45px;
+    padding-right: 130px;
+}
+.aboutMe {
+    margin-top: 60px;
+}
+
+/*....... STRAT EDU & EXP ......*/
+#education_experience{
+	padding: 85px 0;
+	background:linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)) ,url('img/educa-ex.jpeg'); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+.education {
+    padding: 0 15px 0 0;
+}
+
+.year h2 {
+    font-size: 21px;
+    padding: 11px 0;
+    color: var(--tc);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.industrialRanning p,
+.experienceYear p {
+    font-size: 15px;
+    line-height: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+
+#mukul{
+	padding: 70px 0;
+}
+.folloing_1, .folloing_2 {
+    background: #e6e6e6;
+    padding: 5px 0;
+}
+.folloing_1 {
+    width: 100%;
+}
+.folloing_1
+.folloing_2, h3 {
+    font-size: 18px;
+    color: var(--tc);
+    margin: 10px 0;
+}
+.folloing_1 p,
+.folloing_2 p {
+    font-size: 16px;
+    color: #7d7d7d;
+    padding: 0px 36px;
+}
+
+/*....... STRAT SKILL ......*/
+
+#skill{
+	padding: 85px 0;
+	background:#efefef;
+}
+
+h2.animateSkillTitle {
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*....... STRAT contact.....*/
+
+#contact{
+	padding: 85px 0;
+}
+
+#contact form div input,
+#contact form div textarea,::placeholder{
+	font-size: 16px !important;
+}
+
+#contact .form-control {
+    padding: 10px 16px;
+    background-color: #f5f5f5;
+    background-clip: padding-box;
+    border: 1px solid var(--bg);
+}
+
+#contact .form-control:focus {
+    border-color: var(--bg);
+    box-shadow: 0 0 0 0rem var(--bg);
+    background: rgba(85, 105, 220,.3);
+}
+.send-btn.animate-btn {
+    margin-top: 10px;
+}
+/*....... END INTEREST.....*/
+/*....... STRAT FOOTER ......*/
+#footer{
+	padding: 85px 0;
+}
+section#footer h2 {
+    color: red;
+    text-transform: capitalize;
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    color: var(--tc);
+     margin-bottom: 20px;
+}
+
+.madeMyWork a {
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 8px 0;
+    color: var(--tc);
+    transition: .3s;
+}
+.madeMyWork a:hover{
+	background: #edf0fc;
+}
+.madeMyWork a:first-child{
+	padding-top: 0;
+}
+.madeMyWork a:last-child{
+	padding-bottom:0;
+}
+ul.footer-social p {
+    font-size: 16px;
+    color: var(--tc);
+    height: 35px;
+    margin: 8px 0;
+} 
+
+ul.footer-social a {
+    float: right;
+    text-decoration: none;
+    background: var(--bg);
+    color: #fff;
+    width: 50%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 20px;
+    transition: .3s;
+}
+ul.footer-social a:hover{
+	background: #007bff;;
+}
+#footer .row .col-sm-2{
+	position: relative;
+}
+.topArrow span {
+    font-size: 55px;
+    color: var(--bg);
+    display: block;
+    position: absolute;
+    bottom: 24px;
+    right: 0;
+    height: 79px;
+    cursor: pointer;
+    width: 27px;
+    text-align: right;
+}
+
+.copyRight.py-3.text-center {
+    background: #efefef;
+}
+
+
